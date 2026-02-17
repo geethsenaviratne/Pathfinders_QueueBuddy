@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Email</title>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; }
+        h2 { color: #2c3e50; }
+        p { margin: 10px 0; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Hello, <span th:text="${name} ?: 'User'">User</span>!</h2>
+    <p>We are excited to inform you about: <b th:text="${subject} ?: 'Welcome to Our Platform!'">Welcome to Our Platform!</b></p>
+    <p>Message: <span th:text="${message} ?: 'Thank you for joining us!'">Thank you for joining us!</span></p>
+</div>
+</body>
+</html>

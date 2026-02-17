@@ -1,0 +1,119 @@
+/* Global container */
+.appointment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f0f6ff, #e6ebf5);
+    padding: 20px;
+}
+
+/* Card */
+.appointment-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f1f1;
+}
+
+/* Title */
+.appointment-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3a8c;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.appointment-subtitle {
+    font-size: 0.95rem;
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Messages */
+.appointment-message {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.appointment-message.success {
+    background: #e6f9ed;
+    color: #0b8c3f;
+    border: 1px solid #a9e6bf;
+}
+
+.appointment-message.error {
+    background: #fdeaea;
+    color: #b00020;
+    border: 1px solid #f5b5b5;
+}
+
+.appointment-message.warning {
+    background: #fff7e6;
+    color: #a26b00;
+    border: 1px solid #ffd17a;
+}
+
+/* Form */
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Form groups */
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+    outline: none;
+}
+
+/* Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background: #3b5ae0;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}

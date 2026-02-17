@@ -27,15 +27,20 @@ public class Users {
     @Column(name = "date_created")
     private Date dateCreated;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "userTypeId", referencedColumnName = "userTypeId")
+    private UserType userTypeId;
+
     public Users() {
     }
 
-    public Users(int userId, String firstName, String lastName, String email, String password, Date dateCreated) {
+    public Users(int userId, String firstName, String lastName, String email, String password, Date dateCreated,  UserType userTypeId) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.userTypeId = userTypeId;
         this.dateCreated = dateCreated;
     }
 
@@ -47,7 +52,13 @@ public class Users {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ",UserType=" + userTypeId +
                 ", dateCreated=" + dateCreated +
                 '}';
     }
+
+    public int getId() {
+        return userId;
+    }
+
 }
